@@ -53,7 +53,7 @@ jobs:
         #   report.location_details=true
         # additionalParams: '-localsettings config.properties'
         # commandLinePattern: '${cpptestcli} -data ../workspace -config "builtin://Recommended Rules" -report "$_report/" ${additionalParams}'
-        commandLinePattern: '${cpptestcli} -data d:\workspace\2024.1 -resource ATM -config "builtin://Recommended Rules" -report "_report/" -property "report.format=sarif"'
+        commandLinePattern: '${cpptestcli} -data d:\workspace\2024.1 -resource ATM -config "builtin://Recommended Rules" -report "c:\actions-runner\_work\ATM\ATM\_report" -localsettings "D:\workspace\cpptest2024.1.properties" -property "report.format=sarif"'
 
     # Uploads analysis results in the SARIF format, so that they are displayed as GitHub code scanning alerts.
     - name: Upload results (SARIF)
