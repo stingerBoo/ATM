@@ -3,9 +3,11 @@ name: C/C++test with Make
 on:
   # Triggers the workflow on push or pull request events but only for the master (main) branch.
   push:
-    branches: [ main, main ]
+    #branches: [ main, main ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, main ]
+    #branches: [ main, main ]
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab.
   workflow_dispatch:
@@ -56,7 +58,7 @@ jobs:
         #commandLinePattern: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "builtin://SEI CERT C Guidelines" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif"'
         #commandLinePattern: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "builtin://MISRA C 2023 (MISRA C 2012) branch1 main" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif"'
         #
-        commandLinePattern: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "user://MISRA C 2023 (MISRA C 2012) branch1 main" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif" -appconsole stdout -showsettings -showdetails'
+        commandLinePattern: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "user://MISRA C 2023 (MISRA C 2012) branch1 main" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif" -appconsole stdout -showdetails'
         #commandLinePattern: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "builtin://MISRA C 2023 (MISRA C 2012)" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif"'
     
     # Uploads analysis results in the SARIF format, so that they are displayed as GitHub code scanning alerts.
