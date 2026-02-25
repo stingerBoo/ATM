@@ -39,7 +39,11 @@ jobs:
     # Be sure 'cpptesttrace' is available on $PATH.
     #- name: Build project
     #  run: cpptesttrace make clean all
-
+    - name: Checkout repository
+      # Use the 'run-cpptest-action' GitHub action.
+      uses: actions/checkout@v4      
+      with:  
+       fetch-depth: 0     
     # Runs code analysis with C/C++test.
     - name: Run C/C++test
       # Use the 'run-cpptest-action' GitHub action.
