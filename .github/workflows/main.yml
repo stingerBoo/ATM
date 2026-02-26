@@ -45,27 +45,22 @@ jobs:
       # Use the 'run-cpptest-action' GitHub action.
       uses: actions/checkout@v4      
       with:  
-       fetch-depth: 0     
+       fetch-depth: 0
+       
+    # Runs code analysis with C/C++test.   
+    - name: Run C/C++test in shell
+      shell: cmd
+      run: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "user://MISRA C 2023 (MISRA C 2012) branch1 main" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif" -appconsole stdout -showdetails'
+        #commandLinePattern: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "builtin://MISRA C 2023 (MISRA C 2012)" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif"'
+    
     # Runs code analysis with C/C++test.
-    - name: Run C/C++test
+    #- name: Run C/C++test
       # Use the 'run-cpptest-action' GitHub action.
-      uses: parasoft/run-cpptest-action@2.0.2
-      with:
-        # To enable SARIF reporting, put additional configuration entries into config.properties file:
-        # - for C/C++test 2021.1 or newer - using built-in SARIF reporting:
-        #   report.format=sarif
-        # - for older versions of C/C++test - using legacy SARIF reporting:
-        #   report.format=custom
-        #   report.custom.extension=sarif
-        #   report.custom.xsl.file=${PARASOFT_SARIF_PRO_XSL}
-        #   report.location_details=true
-        # additionalParams: '-localsettings config.properties'
-        # commandLinePattern: '${cpptestcli} -data ../workspace -config "builtin://Recommended Rules" -report "$_report/" ${additionalParams}'
-        #commandLinePattern: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "builtin://SEI CERT C Guidelines" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif"'
-        #commandLinePattern: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "builtin://MISRA C 2023 (MISRA C 2012) branch1 main" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif"'
+      #uses: parasoft/run-cpptest-action@2.0.2
+      #with:
         #
-        additionalParams: "-J-Dscontrol.log=true"
-        commandLinePattern: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "user://MISRA C 2023 (MISRA C 2012) branch1 main" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif" -appconsole stdout -showdetails'
+        #additionalParams: "-J-Dscontrol.log=true"
+        #commandLinePattern: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "user://MISRA C 2023 (MISRA C 2012) branch1 main" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif" -appconsole stdout -showdetails'
         #commandLinePattern: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "builtin://MISRA C 2023 (MISRA C 2012)" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif"'
     
     # Uploads analysis results in the SARIF format, so that they are displayed as GitHub code scanning alerts.
