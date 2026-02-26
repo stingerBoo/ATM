@@ -45,7 +45,7 @@ jobs:
       # Use the 'run-cpptest-action' GitHub action.
       uses: actions/checkout@v4      
       with:  
-       ref: 'master'
+       ref: 'branch1'
        fetch-depth: 0
        
     # Runs code analysis with C/C++test.   
