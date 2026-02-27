@@ -93,8 +93,18 @@ jobs:
     
     - name: Run C/C++test in shell  
       shell: bash
-      run: 'sudo -S <<< "password" /home/sgrabinski/cpptest/2025.2_standard/cpptestcli -input "/home/sgrabinski/workspace2025.2_standard/ATM/ATM_github.bdf" -compiler gcc_9-64 -config "/home/sgrabinski/cpptest/2025.2_standard/configs/builtin/MISRA C 2023 (MISRA C 2012).properties" -showdetails'
-     
+      # works with branch but with below setup in properties file:
+      # scontrol.rep1.type=git
+      # scope.scontrol=true
+      # scope.scontrol.files.filter.mode=branch
+      # scope.scontrol.ref.branch=main
+      # scontrol.rep1.git.branch=branch1
+      # scontrol.rep1.git.url=https\://github.com/stingerBoo/ATM.git
+      # scontrol.rep1.git.workspace=/home/sgrabinski/workspace2025.2_standard/ATM/
+      #run: 'sudo -S <<< "password" /home/sgrabinski/cpptest/2025.2_standard/cpptestcli -input "/home/sgrabinski/workspace2025.2_standard/ATM/ATM_github.bdf" -compiler gcc_9-64 -config "/home/sgrabinski/cpptest/2025.2_standard/configs/builtin/MISRA C 2023 (MISRA C 2012).properties" -showdetails'
+      #
+      run: 'sudo -S <<< "password" /home/sgrabinski/cpptest/2025.2_standard/cpptestcli -input "/home/sgrabinski/workspace2025.2_standard/ATM/ATM_github.bdf" -compiler gcc_9-64 -config "/home/sgrabinski/cpptest/2025.2_standard/configs/user/MISRA C 2023 (MISRA C 2012) branch1 main.properties" -showdetails'
+
     # Runs code analysis with C/C++test.
     #- name: Run C/C++test
       # Use the 'run-cpptest-action' GitHub action.
