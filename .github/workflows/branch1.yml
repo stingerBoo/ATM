@@ -92,7 +92,7 @@ jobs:
         #commandLinePattern: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "builtin://MISRA C 2023 (MISRA C 2012)" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif"'
     
     - name: Run C/C++test in shell  
-      shell: cmd
+      shell: bash
       # works with branch but with below setup in properties file:
       # scontrol.rep1.type=git
       # scope.scontrol=true
