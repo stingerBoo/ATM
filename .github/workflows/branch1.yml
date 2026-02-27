@@ -68,8 +68,8 @@ jobs:
       # branch issue
       run: '"c:\Parasoft\cpptest\2025.2_standard\cpptestcli.exe" -showdetails -show-settings'
 
-    - name: Run C/C++test in shell  
-      shell: cmd
+    #- name: Run C/C++test in shell  
+      #shell: cmd
       #
       # run: 'cpptestcli -data d:\workspace\github\cpptest_runner -resource ATM -config "user://MISRA C 2023 (MISRA C 2012) files modify or added" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1_runner.properties" -property "report.format=sarif" -appconsole stdout -showdetails'
       # issue with naming of branch in Test configuration
@@ -85,7 +85,9 @@ jobs:
       # branch issue
       #run: '"c:\Parasoft\cpptest\2025.2_standard\cpptestcli.exe" -input "d:\workspace\github\cpptest2025.2standard_runner\ATM\ATM_github.bdf" -compiler gcc_9-64 -config "C:\Parasoft\cpptest\2025.2_standard\configs\user\MISRA C 2023 (MISRA C 2012) branch1 main.properties"'
       # branch issue
-      run: '"c:\Parasoft\cpptest\2025.2_standard\cpptestcli.exe" -input "d:\workspace\github\cpptest2025.2standard_runner\ATM\ATM_github.bdf" -compiler gcc_9-64 -config "C:\Parasoft\cpptest\2025.2_standard\configs\builtin\MISRA C 2023 (MISRA C 2012).properties" -showdetails'
+      #run: '"c:\Parasoft\cpptest\2025.2_standard\cpptestcli.exe" -input "d:\workspace\github\cpptest2025.2standard_runner\ATM\ATM_github.bdf" -compiler gcc_9-64 -config "C:\Parasoft\cpptest\2025.2_standard\configs\builtin\MISRA C 2023 (MISRA C 2012).properties" -showdetails'
+     # branch issue
+       run: '"/home/sgrabinski/cpptest/2025.2_standard/cpptestcli" -input "/home/sgrabinski/workspace2025.2_standard/ATM/ATM_github.bdf" -compiler gcc_9-64 -config "/home/sgrabinski/cpptest/2025.2_standard/configs/builtin/MISRA C 2023 (MISRA C 2012).properties" -showdetails'
      
         #commandLinePattern: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "builtin://MISRA C 2023 (MISRA C 2012)" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif"'
     
@@ -98,7 +100,8 @@ jobs:
         #additionalParams: "-J-Dscontrol.log=true"
         #commandLinePattern: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "user://MISRA C 2023 (MISRA C 2012) branch1 main" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif" -appconsole stdout -showdetails'
         #commandLinePattern: '${cpptestcli} -data d:\workspace\github\cpptest_runner -resource ATM -config "builtin://MISRA C 2023 (MISRA C 2012)" -report "_report" -localsettings "d:\workspace\cpptest\cpptest2025.1.properties" -property "report.format=sarif"'
-    
+        #commandLinePattern: '${cpptestcli} -input "d:\workspace\github\cpptest2025.2standard_runner\ATM\ATM_github.bdf" -compiler gcc_9-64 -config "C:\Parasoft\cpptest\2025.2_standard\configs\builtin\MISRA C 2023 (MISRA C 2012).properties" -showdetails'
+      
     # Uploads analysis results in the SARIF format, so that they are displayed as GitHub code scanning alerts.
     - name: Upload results (SARIF)
       if: always()
