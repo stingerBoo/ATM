@@ -103,7 +103,7 @@ jobs:
       # scontrol.rep1.git.workspace=/home/sgrabinski/workspace2025.2_standard/ATM/
       #run: 'sudo -S <<< "password" /home/sgrabinski/cpptest/2025.2_standard/cpptestcli -input "/home/sgrabinski/workspace2025.2_standard/ATM/ATM_github.bdf" -compiler gcc_9-64 -config "/home/sgrabinski/cpptest/2025.2_standard/configs/builtin/MISRA C 2023 (MISRA C 2012).properties" -showdetails'
       #
-      run: 'sudo --stdin /home/sgrabinski/cpptest/2025.2_standard/cpptestcli -input "/home/sgrabinski/workspace2025.2_standard/ATM/ATM_github.bdf" -compiler gcc_9-64 -config "/home/sgrabinski/cpptest/2025.2_standard/configs/user/MISRA C 2023 (MISRA C 2012) branch1 main.properties" -showdetails'
+      run: 'sudo --stdin parasoft /home/sgrabinski/cpptest/2025.2_standard/cpptestcli -input "/home/sgrabinski/workspace2025.2_standard/ATM/ATM_github.bdf" -compiler gcc_9-64 -config "/home/sgrabinski/cpptest/2025.2_standard/configs/user/MISRA C 2023 (MISRA C 2012) branch1 main.properties" -showdetails'
 
     # Runs code analysis with C/C++test.
     #- name: Run C/C++test
