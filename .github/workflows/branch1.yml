@@ -93,7 +93,7 @@ jobs:
     
     - name: Run C/C++test in shell  
       shell: bash
-      working-directory: /home/sgrabinski/workspace2025.2_standard
+      #working-directory: /home/sgrabinski/workspace2025.2_standard
       # works with branch but with below setup in properties file:
       # scontrol.rep1.type=git
       # scope.scontrol=true
@@ -106,7 +106,7 @@ jobs:
       #
       #run: 'sudo /home/sgrabinski/cpptest/2025.2_standard/cpptestcli -input "/home/sgrabinski/workspace2025.2_standard/ATM/ATM_github.bdf" -compiler gcc_9-64 -config "/home/sgrabinski/cpptest/2025.2_standard/configs/user/MISRA C 2023 (MISRA C 2012) branch1 main.properties" -showdetails'
      #
-      run: 'cpptestcli -input "/home/sgrabinski/workspace2025.2_standard/ATM/ATM_github.bdf" -compiler gcc_9-64 -config "/home/sgrabinski/cpptest/2025.2_standard/configs/user/MISRA C 2023 (MISRA C 2012) branch1 main.properties" -showdetails'
+      run: 'sudo /home/sgrabinski/cpptest/2025.2_standard/cpptestcli -input "/home/sgrabinski/workspace2025.2_standard/ATM/ATM_github.bdf" -compiler gcc_9-64 -config "/home/sgrabinski/cpptest/2025.2_standard/configs/user/MISRA C 2023 (MISRA C 2012) branch1 main.properties" -showdetails'
 
     
     # Runs code analysis with C/C++test.
