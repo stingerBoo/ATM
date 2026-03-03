@@ -43,7 +43,7 @@ jobs:
     #  run: cpptesttrace make clean all
     - name: Checkout repository
       # Use the 'run-cpptest-action' GitHub action.
-      uses: actions/checkout@v4      
+      uses: actions/checkout@v6      
       with:  
        ref: 'main'
        fetch-depth: 0
