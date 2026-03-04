@@ -116,9 +116,9 @@ jobs:
       shell: cmd
       run: git config --global --add safe.directory "D:\workspace\github\cpptest2025.2standard_runner\ATM"
       
-    - name: re-parse main
-      shell: cmd
-      run: git rev-parse --verify --quiet main
+    #- name: re-parse main
+      #shell: cmd
+      #run: git rev-parse --verify --quiet main
     
      #Runs code analysis with C/C++test.
     - name: Run C/C++test
