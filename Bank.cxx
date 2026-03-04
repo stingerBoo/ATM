@@ -1,6 +1,10 @@
 #include "Bank.hxx"
 #include "Account.hxx"
+//
 
+//
+
+//
 Bank::Bank() : myAccounts()
 {
 	myCurrentAccountNumber = 0;
