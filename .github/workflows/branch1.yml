@@ -114,9 +114,9 @@ jobs:
            git rev-parse --verify --quiet main |
            git config --global --add safe.directory "D:\workspace\github\cpptest2025.2standard_runner\ATM"
     
-    - name: git fetch
-      shell: cmd
-      run: git fetch --all           
+    #- name: git fetch
+      #shell: cmd
+      #run: git fetch --all           
 
     #- name: save.directory
     #  shell: cmd
