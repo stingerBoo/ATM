@@ -1,0 +1,40 @@
+------- cpptestscan v.10.7.3.20251120B4516 (cpptesttrace) -------
+working_dir=d:\workspace\github\cpptest2025.2standard_runner\ATM
+project_name=ATM_github
+arg=C:\cygwin64\bin\g++.exe
+arg=-g
+arg=-Iinclude
+arg=-o
+arg=obj/ATM.o
+arg=-c
+arg=ATM.cxx
+------- cpptestscan v.10.7.3.20251120B4516 (cpptesttrace) -------
+working_dir=d:\workspace\github\cpptest2025.2standard_runner\ATM
+project_name=ATM_github
+arg=C:\cygwin64\bin\g++.exe
+arg=-g
+arg=-Iinclude
+arg=-o
+arg=obj/Bank.o
+arg=-c
+arg=Bank.cxx
+------- cpptestscan v.10.7.3.20251120B4516 (cpptesttrace) -------
+working_dir=d:\workspace\github\cpptest2025.2standard_runner\ATM
+project_name=ATM_github
+arg=C:\cygwin64\bin\g++.exe
+arg=-g
+arg=-Iinclude
+arg=-o
+arg=obj/BaseDisplay.o
+arg=-c
+arg=BaseDisplay.cxx
+------- cpptestscan v.10.7.3.20251120B4516 (cpptesttrace) -------
+working_dir=d:\workspace\github\cpptest2025.2standard_runner\ATM
+project_name=ATM_github
+arg=C:\cygwin64\bin\g++.exe
+arg=-g
+arg=-Iinclude
+arg=-o
+arg=obj/Account.o
+arg=-c
+arg=Account.cxx
