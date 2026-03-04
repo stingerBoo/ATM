@@ -45,7 +45,8 @@ jobs:
       # Use the 'run-cpptest-action' GitHub action.
       uses: actions/checkout@v6      
       with:  
-       ref: 'branch1'
+       #ref: 'branch1'
+       set-safe-directory: 'd:\workspace\github\cpptest2025.2standard_runner\ATM\'
        fetch-depth: 0
        
     # Runs code analysis with C/C++test.   
