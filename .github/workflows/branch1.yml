@@ -112,9 +112,9 @@ jobs:
     #  shell: cmd
     #  run: git fetch --all
 
-    - name: save.directory
-      shell: cmd
-      run: git config --global --add safe.directory "D:\workspace\github\cpptest2025.2standard_runner\ATM"
+    #- name: save.directory
+    #  shell: cmd
+    #  run: git config --global --add safe.directory "D:\workspace\github\cpptest2025.2standard_runner\ATM"
       
     #- name: re-parse main
       #shell: cmd
