@@ -46,7 +46,7 @@ jobs:
       uses: actions/checkout@v6      
       with:  
        #ref: 'branch1'
-       set-safe-directory: 'd:\workspace\github\cpptest2025.2standard_runner\ATM\'
+       set-safe-directory: 'D:/workspace/github/cpptest2025.2standard_runner/ATM'
        fetch-depth: 0
        
     # Runs code analysis with C/C++test.   
