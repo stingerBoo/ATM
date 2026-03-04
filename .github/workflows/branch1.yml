@@ -45,7 +45,7 @@ jobs:
       # Use the 'run-cpptest-action' GitHub action.
       uses: actions/checkout@v6      
       with:  
-       ref: 'main'
+       #ref: 'main'
        set-safe-directory: 'D:/workspace/github/cpptest2025.2standard_runner/ATM'
        fetch-depth: 0
        
@@ -108,9 +108,9 @@ jobs:
       #run: 'sudo /home/sgrabinski/cpptest/2025.2_standard/cpptestcli -input "/home/sgrabinski/workspace2025.2_standard/ATM/ATM_github.bdf" -compiler gcc_9-64 -config "/home/sgrabinski/cpptest/2025.2_standard/configs/user/MISRA C 2023 (MISRA C 2012) branch1 main.properties" -showdetails'
      #
       #run: 'sudo /home/sgrabinski/cpptest/2025.2_standard/cpptestcli -input "/home/sgrabinski/workspace2025.2_standard/ATM/ATM_github.bdf" -compiler gcc_9-64 -config "/home/sgrabinski/cpptest/2025.2_standard/configs/user/MISRA C 2023 (MISRA C 2012) branch1 main.properties" -showdetails'
-    - name: Run C/C++test in shell  
+    - name: git fetch
       shell: cmd
-      run: git fetch origin main:main
+      run: git fetch --all
     
      #Runs code analysis with C/C++test.
     - name: Run C/C++test
