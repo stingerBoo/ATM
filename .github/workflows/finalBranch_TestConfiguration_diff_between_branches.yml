@@ -44,7 +44,7 @@ jobs:
        
     # Use git command and add safe.directory which potentially solves 
     # the issue with Test Configuration > Scope > "Test only files modified between the current working branch and 'main'"
-    - name: a few commands
+    - name: Git commands and safe.directory
       shell: cmd
       run: git fetch --all |
            git rev-parse --verify --quiet main |
