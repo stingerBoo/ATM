@@ -56,7 +56,11 @@ jobs:
       uses: parasoft/run-cpptest-action@2.0.2
       with:
         # ${cpptestcli} is taken from System environemnt.
-       commandLinePattern: '${cpptestcli} -input "d:\workspace\github\cpptest2025.2standard_runner\ATM\ATM_github.bdf" -compiler gcc_9-64 -config "C:\Parasoft\cpptest\2025.2_standard\configs\user\MISRA C 2023 (MISRA C 2012) branch1 main.properties" -localsettings "D:\workspace\cpptest\cpptest2025.2_runner.properties" -showdetails'
+       workingDir: 'd:\workspace\github\cpptest2025.2standard_runner\ATM\'
+       input: 'd:\workspace\github\cpptest2025.2standard_runner\ATM\ATM_github.bdf'
+       testConfig: 'C:\Parasoft\cpptest\2025.2_standard\configs\user\MISRA C 2023 (MISRA C 2012) branch1 main.properties'
+       installDir: 'c:\Parasoft\cpptest\2025.2_standard\'
+       commandLinePattern: '${cpptestcli} -input "${input}" -compiler gcc_9-64 -config "${testConfig}" -localsettings "D:\workspace\cpptest\cpptest2025.2_runner.properties" -showdetails'
       
     # Uploads analysis results in the SARIF format, so that they are displayed as GitHub code scanning alerts.
     - name: Upload results (SARIF)
